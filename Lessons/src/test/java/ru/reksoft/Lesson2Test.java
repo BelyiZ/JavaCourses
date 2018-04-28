@@ -7,14 +7,14 @@ import org.junit.Test;
 public class Lesson2Test {
 
     @Test
-    void formula() {
+    public void formula() {
         assertEquals(5, Lesson2.formula(1), "y(1) = 5");
         assertEquals(13, Lesson2.formula(15), "y(15) = 13");
         assertEquals(44, Lesson2.formula(155), "y(155) = 44");
     }
 
     @Test
-    void initials() {
+    public void initials() {
         assertEquals("И.И.П.", Lesson2.initials("Иванов Иван Петрович"), "Иванов Иван Петрович → И.И.П.");
         assertEquals("П.А.Н.", Lesson2.initials("Петров алексей Никифорович"), "Петров алексей Никифорович → П.А.Н.");
         assertEquals("К.Г.В.", Lesson2.initials("Козлова Галина Васильевна"), "Козлова Галина Васильевна → К.Г.В.");

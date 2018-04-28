@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
-class Lesson2Test {
+public class Lesson2Test {
 
     @Test
     void formula() {

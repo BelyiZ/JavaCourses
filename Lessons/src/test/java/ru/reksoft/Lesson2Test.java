@@ -4,6 +4,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
+/**
+ * Если тут все красное и IEDA ругается:
+ * 1. ставим курсор на красный текст
+ * 2. жмем alt + enter
+ * 3. выбираем из того, что предлагает
+ * Если там есть выбор JUnit4 vs JUnit5 - выбираем 5-ю версию
+ * Если там есть текст походжий на "add dependency at module main" - выбираем его
+ */
 public class Lesson2Test {
 
     @Test

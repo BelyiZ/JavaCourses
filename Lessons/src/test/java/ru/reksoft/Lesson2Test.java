@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+
 /**
  * Если тут все красное и IEDA ругается:
  * 1. ставим курсор на красный текст

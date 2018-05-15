@@ -1,6 +1,6 @@
 package ru.reksoft;
 
-class Lesson2 {
+public class Lesson2 {
 
     /**
      * Нужно реализовать формулу y = √(13x + 13/x)
@@ -10,8 +10,9 @@ class Lesson2 {
      * @return возвращаем только целую часть от полученного результата,
      * хвост отбрасываем без откругления
      */
-    static int formula(int x) {
-        return 0;
+    static double formula(int x) {
+        double y =13*x+13/x;
+        return (int) Math.sqrt(y);
     }
 
     /**
@@ -27,7 +28,11 @@ class Lesson2 {
      * @return возвращаем инициалы в верхнем регистре разделенные точкой, как в примере выше
      */
     static String initials(String fullName) {
-        return null;
+        String[] first_letter= fullName.split(" ");
+        String new_str = first_letter[0].charAt(0)+"."+first_letter[1].charAt(0)+"."+first_letter[2].charAt(0)+".";
+
+        return new_str.toUpperCase();
     }
+
 
 }

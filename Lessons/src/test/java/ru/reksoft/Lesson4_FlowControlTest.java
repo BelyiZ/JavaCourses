@@ -41,7 +41,7 @@ class Lesson4_FlowControlTest {
         assertEquals(4, task2(2, 2, '*'), "2 * 2 = 4");
         assertEquals(17, task2(5, 12, '+'), "5 + 12 = 17");
         assertEquals(0, task2(0, 0, '*'), "0 * 0 = 0");
-        assertEquals(-9, task2(1, -10, '-'), "1 - 10 = -9");
+        assertEquals(-9, task2(1, 10, '-'), "1 - 10 = -9");
         assertEquals(4, task2(25, 6, '/'), "25 / 6 = 4");
         assertEquals(1, task2(121, 2, '%'), "121 % 2 = 1");
         assertEquals(0, task2(17, 0, '/'), "121 / 0 = 0");

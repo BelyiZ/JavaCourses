@@ -1,8 +1,8 @@
-package ru.reksoft;
+package ru.java.courses;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.reksoft.Lesson4_FlowControl.task1;
-import static ru.reksoft.Lesson4_FlowControl.task2;
+import static ru.java.courses.Lesson4_FlowControl.task1;
+import static ru.java.courses.Lesson4_FlowControl.task2;
 
 import org.junit.jupiter.api.Test;
 /**

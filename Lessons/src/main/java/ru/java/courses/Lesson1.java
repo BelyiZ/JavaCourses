@@ -1,4 +1,4 @@
-package ru.reksoft;
+package ru.java.courses;
 
 public class Lesson1 {
 

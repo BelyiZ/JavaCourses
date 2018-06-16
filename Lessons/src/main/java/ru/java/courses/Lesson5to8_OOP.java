@@ -1,7 +1,7 @@
 package ru.java.courses;
 
 
-public class Lesson5_OOP {
+public class Lesson5to8_OOP {
 
 /*
     В этом задании необходимо реализовать объектную модель футбольной команды.

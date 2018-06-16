@@ -14,7 +14,7 @@ import ru.java.courses.football.Player;
 import ru.java.courses.football.PlayerRole;
 import ru.java.courses.football.Team;
 
-public class Lesson5_OOPTest {
+public class Lesson5to8_OOPTest {
 
     private static Team team;
 

@@ -1,6 +1,11 @@
 package ru.java.courses;
 
 
+import ru.java.courses.football.Coach;
+import ru.java.courses.football.Player;
+import ru.java.courses.football.PlayerRole;
+import ru.java.courses.football.Team;
+
 public class Lesson5to8_OOP {
 
 /*
@@ -47,5 +52,6 @@ public class Lesson5to8_OOP {
     2. Не забывайте про геттеры и сеттеры
     3. Вспомните все чему я вас учил ©
 */
+
 
 }

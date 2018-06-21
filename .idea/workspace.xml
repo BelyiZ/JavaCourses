@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae6a60e4-8841-4539-a30c-d3488e51bb9b" name="Default" comment="football_team">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/B.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Coach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/Lesson_other.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/PlayerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/PlayerRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/Lesson5to8_OOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/Lesson5to8_OOP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lessons/src/main/java/ru/reksoft/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Team.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lesson5to8_OOP.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lesson5to8_OOP.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/Lesson5to8_OOP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="87" column="40" lean-forward="true" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+            <state relative-caret-position="407">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lesson5to8_OOPTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lesson5to8_OOPTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lessons/src/test/java/ru/java/courses/Lesson5to8_OOPTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
+            <state relative-caret-position="1411">
               <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,8 +63,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            <state relative-caret-position="187">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding>
                 <element signature="e#816#817#0" expanded="true" />
                 <element signature="e#844#845#0" expanded="true" />
@@ -171,10 +169,10 @@
         <option value="$PROJECT_DIR$/Lessons/src/test/java/ru/java/courses/Lesson5to8_OOPTest.java" />
         <option value="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Coach.java" />
         <option value="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/PlayerRole.java" />
-        <option value="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/Lesson5to8_OOP.java" />
         <option value="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Person.java" />
         <option value="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Team.java" />
         <option value="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Player.java" />
+        <option value="$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/Lesson5to8_OOP.java" />
       </list>
     </option>
   </component>
@@ -453,13 +451,17 @@
       <option name="project" value="LOCAL" />
       <updated>1528274579346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="football_team">
+      <created>1529575285856</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1529575285856</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Lesson5to8_OOPTest - 2018.06.21 at 12h 17m 09s.xml">
-      <configuration name="Lesson5to8_OOPTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Lesson5to8_OOPTest_teamScoreTest - 2018.06.21 at 12h 18m 20s.xml">
       <configuration name="Lesson5to8_OOPTest.teamScoreTest" configurationId="JUnit" />
     </history-entry>
@@ -479,6 +481,15 @@
       <configuration name="Lesson5to8_OOPTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Lesson5to8_OOPTest - 2018.06.21 at 12h 56m 29s.xml">
+      <configuration name="Lesson5to8_OOPTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Lesson5to8_OOPTest_nullablePlayerRoleTest - 2018.06.21 at 12h 57m 50s.xml">
+      <configuration name="Lesson5to8_OOPTest.nullablePlayerRoleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Lesson5to8_OOPTest_nullablePlayerRoleTest - 2018.06.21 at 12h 59m 13s.xml">
+      <configuration name="Lesson5to8_OOPTest.nullablePlayerRoleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Lesson5to8_OOPTest - 2018.06.21 at 12h 59m 24s.xml">
       <configuration name="Lesson5to8_OOPTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -801,16 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/Lesson5to8_OOP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="87" column="40" lean-forward="true" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -828,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/football/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        <state relative-caret-position="187">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding>
             <element signature="e#816#817#0" expanded="true" />
             <element signature="e#844#845#0" expanded="true" />
@@ -849,8 +850,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lessons/src/test/java/ru/java/courses/Lesson5to8_OOPTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
+        <state relative-caret-position="1411">
           <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lessons/src/main/java/ru/java/courses/Lesson5to8_OOP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

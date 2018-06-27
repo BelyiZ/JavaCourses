@@ -32,9 +32,9 @@ public abstract class Team<T extends Athlete & ScoringPlayer> {
     public abstract int getMaxPlayersCount();
 
     /**
-     * Добавляем игрока в команду
+     * Добавляем игроков в команду
      *
-     * @param player добавляемый игрок
+     * @param newPlayers добавляемые игроки
      *
      * @throws IllegalStateException если достигнут лимит по количеству игроков
      */
@@ -50,9 +50,8 @@ public abstract class Team<T extends Athlete & ScoringPlayer> {
     /**
      * Удаляет игрока из команды
      *
-     * @param number порядковый номер удаляемого игрока
+     * @param player удаляемый игрок
      *
-     * @throws IndexOutOfBoundsException если переданный порядковый номер меньше нуля или больше количества игроков в команде
      */
     public void removePlayer(T player) {
         players.remove(player);

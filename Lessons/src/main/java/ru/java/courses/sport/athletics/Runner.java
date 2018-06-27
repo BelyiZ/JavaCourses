@@ -1,4 +1,4 @@
-package ru.java.courses.sport.trackAndField;
+package ru.java.courses.sport.athletics;
 
 import ru.java.courses.sport.Athlete;
 import ru.java.courses.sport.Coach;

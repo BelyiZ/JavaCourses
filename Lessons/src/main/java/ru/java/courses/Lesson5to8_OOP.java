@@ -23,11 +23,11 @@ public class Lesson5to8_OOP {
 
     Некоторые названия классов полей и методов:
 
-    Класс: Team
+    Класс: FootballTeam
     Поля: players, name, coach
     Методы: addPlayers, getPlayersCount, getScore
 
-    Класс: Player
+    Класс: ScoringPlayer
     Поля: name, goals, role
     Методы: score
 
@@ -37,7 +37,7 @@ public class Lesson5to8_OOP {
     Поля: experience, name
 
 
-    Модель создавайте в пакете ru.java.courses.football. Импорты в тесте уже добавлены.
+    Модель создавайте в пакете ru.java.courses.sport.teamGames.football. Импорты в тесте уже добавлены.
 
 
     Подсказки:

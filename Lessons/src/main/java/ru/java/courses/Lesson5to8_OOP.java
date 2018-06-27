@@ -37,7 +37,7 @@ public class Lesson5to8_OOP {
     Поля: experience, name
 
 
-    Модель создавайте в пакете ru.java.courses.sport.teamGames.football. Импорты в тесте уже добавлены.
+    Модель создавайте в пакете ru.java.courses.sport.team.football. Импорты в тесте уже добавлены.
 
 
     Подсказки:

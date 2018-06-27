@@ -1,4 +1,4 @@
-package ru.java.courses.sport.teamGames.tennis;
+package ru.java.courses.sport.team.tennis;
 
 import ru.java.courses.sport.Athlete;
 import ru.java.courses.sport.ScoringPlayer;

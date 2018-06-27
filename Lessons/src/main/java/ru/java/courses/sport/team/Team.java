@@ -1,4 +1,4 @@
-package ru.java.courses.sport.teamGames;
+package ru.java.courses.sport.team;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,6 +1,6 @@
-package ru.java.courses.sport.teamGames.football;
+package ru.java.courses.sport.team.football;
 
-import ru.java.courses.sport.teamGames.Team;
+import ru.java.courses.sport.team.Team;
 
 public class FootballTeam extends Team<FootballPlayer> {
 

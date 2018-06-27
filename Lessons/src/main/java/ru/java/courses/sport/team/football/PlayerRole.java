@@ -1,4 +1,4 @@
-package ru.java.courses.sport.teamGames.football;
+package ru.java.courses.sport.team.football;
 
 public enum PlayerRole {
 

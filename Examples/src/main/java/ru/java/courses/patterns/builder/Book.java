@@ -22,100 +22,152 @@ public class Book {
 
     private int year;
 
-    public Book(String author, String name, String ISBN, int pagesCount, String coverColor, String annotation, double price, int quantity, double discount, int year) {
-        this.author = author;
-        this.name = name;
-        this.ISBN = ISBN;
-        this.pagesCount = pagesCount;
-        this.coverColor = coverColor;
-        this.annotation = annotation;
-        this.price = price;
-        this.quantity = quantity;
-        this.discount = discount;
-        this.year = year;
-    }
-
-    public Book() {
+    private Book() {
 
     }
 
-    public String getAuthor() {
+    private String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    private void setAuthor(String author) {
         this.author = author;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
-    public String getISBN() {
+    private String getISBN() {
         return ISBN;
     }
 
-    public void setISBN(String ISBN) {
+    private void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 
-    public int getPagesCount() {
+    private int getPagesCount() {
         return pagesCount;
     }
 
-    public void setPagesCount(int pagesCount) {
+    private void setPagesCount(int pagesCount) {
         this.pagesCount = pagesCount;
     }
 
-    public String getCoverColor() {
+    private String getCoverColor() {
         return coverColor;
     }
 
-    public void setCoverColor(String coverColor) {
+    private void setCoverColor(String coverColor) {
         this.coverColor = coverColor;
     }
 
-    public String getAnnotation() {
+    private String getAnnotation() {
         return annotation;
     }
 
-    public void setAnnotation(String annotation) {
+    private void setAnnotation(String annotation) {
         this.annotation = annotation;
     }
 
-    public double getPrice() {
+    private double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    private void setPrice(double price) {
         this.price = price;
     }
 
-    public int getQuantity() {
+    private int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    private void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public double getDiscount() {
+    private double getDiscount() {
         return discount;
     }
 
-    public void setDiscount(double discount) {
+    private void setDiscount(double discount) {
         this.discount = discount;
     }
 
-    public int getYear() {
+    private int getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    private void setYear(int year) {
         this.year = year;
+    }
+
+
+    public static class BookBuilder {
+
+        private Book book;
+
+        public BookBuilder() {
+            book = new Book();
+        }
+
+
+        public BookBuilder author(String author) {
+            book.setAuthor(author);
+            return this;
+        }
+
+        public BookBuilder name(String name) {
+            book.setName(name);
+            return this;
+        }
+
+        public BookBuilder isbn(String isbn) {
+            book.setISBN(isbn);
+            return this;
+        }
+
+        public BookBuilder pagesCount(int pagesCount) {
+            book.setPagesCount(pagesCount);
+            return this;
+        }
+
+        public BookBuilder coverColor(String coverColor) {
+            book.setCoverColor(coverColor);
+            return this;
+        }
+
+        public BookBuilder annotation(String annotation) {
+            book.setAnnotation(annotation);
+            return this;
+        }
+
+        public BookBuilder price(double price) {
+            book.setPrice(price);
+            return this;
+        }
+
+        public BookBuilder quantity(int quantity) {
+            book.setQuantity(quantity);
+            return this;
+        }
+
+        public BookBuilder discount(double discount) {
+            book.setDiscount(discount);
+            return this;
+        }
+
+        public BookBuilder year(int year) {
+            book.setYear(year);
+            return this;
+        }
+
+        public Book build() {
+            return book;
+        }
     }
 }

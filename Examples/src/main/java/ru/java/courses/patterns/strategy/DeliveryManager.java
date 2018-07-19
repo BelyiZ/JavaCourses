@@ -45,9 +45,13 @@ public class DeliveryManager {
             strategy = new CarStrategy();
         } else if (trafficJam.getLevel() < 5) { // Проверяем загруженность на дорогах
             strategy = new ScooterStategy();
-        } else {
+        } else if () {
             strategy = new BikeStrategy();
+        } else if() {
+            strategy = new SamokatStrategy();
         }
+
+        strategy = new WalkStrategy();
 
         return strategy;
     }

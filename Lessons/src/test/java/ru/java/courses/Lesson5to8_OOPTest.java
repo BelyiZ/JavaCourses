@@ -8,11 +8,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.lang.reflect.Method;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import ru.java.courses.football.Coach;
-import ru.java.courses.football.Person;
-import ru.java.courses.football.Player;
-import ru.java.courses.football.PlayerRole;
-import ru.java.courses.football.Team;
+import ru.java.courses.sport.Athlete;
+import ru.java.courses.sport.Coach;
+import ru.java.courses.sport.team.Team;
+import ru.java.courses.sport.team.football.FootballPlayer;
+import ru.java.courses.sport.team.football.FootballTeam;
+import ru.java.courses.sport.team.football.PlayerRole;
 
 public class Lesson5to8_OOPTest {
 
@@ -20,22 +21,22 @@ public class Lesson5to8_OOPTest {
 
     @BeforeAll
     public static void setup() {
-        team = new Team("Вымпел");
+        team = new FootballTeam("Вымпел");
 
         Coach coach = new Coach("Иван Гоняймяч");
         coach.setExperience(12);
         team.setCoach(coach);
 
-        Player goalkeeper = new Player("Алексей Петров", PlayerRole.GOALKEEPER);
-        Player winger = new Player("Сергей Забивалов", PlayerRole.WINGER);
-        Player defender1 = new Player("Николай Башкоймяч", PlayerRole.DEFENDER);
+        FootballPlayer goalkeeper = new FootballPlayer("Алексей Петров", PlayerRole.GOALKEEPER);
+        FootballPlayer winger = new FootballPlayer("Сергей Забивалов", PlayerRole.WINGER);
+        FootballPlayer defender1 = new FootballPlayer("Николай Башкоймяч", PlayerRole.DEFENDER);
 
         team.addPlayers(goalkeeper, winger, defender1);
 
-        Player defender2 = new Player("Евгений Забейгол", PlayerRole.DEFENDER);
-        team.addPlayers(defender2);
+        FootballPlayer defender2 = new FootballPlayer("Евгений Забейгол", PlayerRole.DEFENDER);
+        team.addPlayer(defender2);
 
-        team.removePlayer(2); // удалили первого защитника
+        team.removePlayer(defender1); // удалили первого защитника
 
         winger.score();
         winger.score();
@@ -67,11 +68,11 @@ public class Lesson5to8_OOPTest {
     @Test
     public void nullablePlayerRoleTest() {
         try {
-            new Player("Петька", null);
+            new FootballPlayer("Петька", null);
         } catch (Exception ignore) {
             try {
-                Player player = new Player("Семён", PlayerRole.GOALKEEPER);
-                Method setter = Player.class.getMethod("setRole", PlayerRole.class);
+                FootballPlayer player = new FootballPlayer("Семён", PlayerRole.GOALKEEPER);
+                Method setter = FootballPlayer.class.getMethod("setRole", PlayerRole.class);
                 setter.invoke(player, new Object[]{null});
                 if (player.getRole() != null) {
                     return;
@@ -86,14 +87,13 @@ public class Lesson5to8_OOPTest {
 
     @Test
     public void inheritanceTest() {
-        assertTrue(team.getCoach() instanceof Person, "Тренер тоже человек!");
-        assertTrue(team.getPlayers().get(0) instanceof Person, "Игроки тоже люди!");
+        assertTrue(team.getPlayers().get(0) instanceof Athlete, "Игроки - атлеты!");
         assertTrue(PlayerRole.class.isEnum(), "Роли игроков должны быть перечисление");
     }
 
     @Test
     public void reservedPlayerScoreTest() {
-        Player player = new Player("Artem", PlayerRole.DEFENDER);
+        FootballPlayer player = new FootballPlayer("Artem", PlayerRole.DEFENDER);
         player.setActive(false);
 
         try {
@@ -107,26 +107,26 @@ public class Lesson5to8_OOPTest {
 
     @Test
     public void maxPlayersTest() {
-        Team team = new Team("Не резиновая");
+        FootballTeam team = new FootballTeam("Не резиновая");
         try {
             for (int i = 0; i < 25; i++) {
-                team.addPlayers(new Player("NoName", PlayerRole.GOALKEEPER));
+                team.addPlayer(new FootballPlayer("NoName", PlayerRole.GOALKEEPER));
             }
         } catch (Exception ignore) {
         }
 
-        assertTrue(team.getPlayers().size() <= 20, "В команде не может быть больше 20 игроков");
+        assertTrue(team.getMaxPlayersCount() <= 20, "В команде не может быть больше 20 игроков");
     }
 
     @Test
     public void playerWithoutNameTest() {
         try {
-            new Player(null, PlayerRole.WINGER);
-            new Player("", PlayerRole.WINGER);
+            new FootballPlayer(null, PlayerRole.WINGER);
+            new FootballPlayer("", PlayerRole.WINGER);
         } catch (Exception ignore) {
             try {
-                Player player = new Player("NoName", PlayerRole.WINGER);
-                Method setter = Player.class.getMethod("setName", String.class);
+                FootballPlayer player = new FootballPlayer("NoName", PlayerRole.WINGER);
+                Method setter = FootballPlayer.class.getMethod("setName", String.class);
                 setter.invoke(player, new Object[]{null});
                 setter.invoke(player, "");
                 if (player.getName() != null && !player.getName().isEmpty()) {
@@ -165,12 +165,12 @@ public class Lesson5to8_OOPTest {
     @Test
     public void teamWithoutNameTest() {
         try {
-            new Team(null);
-            new Team("");
+            new FootballTeam(null);
+            new FootballTeam("");
         } catch (Exception ignore) {
             try {
-                Team team = new Team("NoName");
-                Method setter = Team.class.getMethod("setName", String.class);
+                FootballTeam team = new FootballTeam("NoName");
+                Method setter = FootballTeam.class.getMethod("setName", String.class);
                 setter.invoke(team, new Object[]{null});
                 setter.invoke(team, "");
                 if (team.getName() != null && !team.getName().isEmpty()) {

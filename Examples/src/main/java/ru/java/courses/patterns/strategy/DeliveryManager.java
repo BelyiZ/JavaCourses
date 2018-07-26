@@ -26,7 +26,7 @@ public class DeliveryManager {
         Courier courier = chooseCourier();
 
         TransportStrategy strategy = chooseStrategy();
-        strategy.reserve(courier.getId());
+//        strategy.reserve(courier.getId());
 
         status = Status.STARTED;
     }
@@ -39,19 +39,19 @@ public class DeliveryManager {
     private TransportStrategy chooseStrategy() {
         TransportStrategy strategy = null;
 
-        if (courier.isHasLicense()) { // Проверяем наличие водительских прав у курьера
-            strategy = new BikeStrategy();
-        } else if (distance.isLong()) { // Проверяем расстояние
-            strategy = new CarStrategy();
-        } else if (trafficJam.getLevel() < 5) { // Проверяем загруженность на дорогах
-            strategy = new ScooterStategy();
-        } else if () {
-            strategy = new BikeStrategy();
-        } else if() {
-            strategy = new SamokatStrategy();
-        }
-
-        strategy = new WalkStrategy();
+//        if (courier.isHasLicense()) { // Проверяем наличие водительских прав у курьера
+//            strategy = new BikeStrategy();
+//        } else if (distance.isLong()) { // Проверяем расстояние
+//            strategy = new CarStrategy();
+//        } else if (trafficJam.getLevel() < 5) { // Проверяем загруженность на дорогах
+//            strategy = new ScooterStategy();
+//        } else if () {
+//            strategy = new BikeStrategy();
+//        } else if() {
+//            strategy = new SamokatStrategy();
+//        }
+//
+//        strategy = new WalkStrategy();
 
         return strategy;
     }

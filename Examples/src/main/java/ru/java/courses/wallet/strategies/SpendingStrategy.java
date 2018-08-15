@@ -1,4 +1,6 @@
-package ru.java.courses.wallet;
+package ru.java.courses.wallet.strategies;
+
+import ru.java.courses.wallet.Category;
 
 public interface SpendingStrategy {
 

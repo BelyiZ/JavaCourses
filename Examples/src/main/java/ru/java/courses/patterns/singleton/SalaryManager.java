@@ -18,7 +18,7 @@ public class SalaryManager {
 
     private Map<Long, Double> salaries = new HashMap<>();
 
-    private List<Employee> stuff = new ArrayList<>();
+//    private List<Employee> stuff = new ArrayList<>();
 
     public void setSalary(long employeeId) {
         // Устанавливаем новую зарплату

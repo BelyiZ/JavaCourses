@@ -1,5 +1,7 @@
 package ru.java.courses.wallet;
 
+import ru.java.courses.wallet.strategies.SpendingStrategy;
+
 public class Wallet {
 
     private static Wallet instance = new Wallet();
@@ -13,7 +15,7 @@ public class Wallet {
 
     private double money;
 
-    private double salary;
+
 
     private SpendingStrategy strategy;
 
@@ -45,14 +47,6 @@ public class Wallet {
         // тратим
         this.money -= money;
         this.availableInMonth -= money;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
     }
 
     public double getMoney() {

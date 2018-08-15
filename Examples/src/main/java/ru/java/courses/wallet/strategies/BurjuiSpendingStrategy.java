@@ -1,4 +1,7 @@
-package ru.java.courses.wallet;
+package ru.java.courses.wallet.strategies;
+
+import ru.java.courses.wallet.Category;
+import ru.java.courses.wallet.Wallet;
 
 public class BurjuiSpendingStrategy implements SpendingStrategy {
 

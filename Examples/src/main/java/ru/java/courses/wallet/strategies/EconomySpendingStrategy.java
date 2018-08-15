@@ -1,27 +1,26 @@
-package ru.java.courses.wallet;
+package ru.java.courses.wallet.strategies;
 
-public class StandartSpendingStrategy implements SpendingStrategy {
+import ru.java.courses.wallet.Category;
 
-    private Wallet wallet = Wallet.getInstance();
+public class EconomySpendingStrategy implements SpendingStrategy {
+
+    public static final double AVAILABLE_MONEY = 100.0;
 
     @Override
     public double getAvailableMoney() {
-        return wallet.getSalary() * 0.5;
+        return AVAILABLE_MONEY;
     }
 
     @Override
     public boolean canSpendMoney(double money, Category category) {
-        if (money > getAvailableMoney()) {
+        if (money > AVAILABLE_MONEY) {
             return false;
         }
 
         switch (category) {
             case FOOD:
             case DRUGS:
-            case COFFEE_CLUB:
                 return true;
-            case ENTERTAINMENT:
-                return money < getAvailableMoney() * 0.1;
             default:
                 return false;
         }

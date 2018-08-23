@@ -9,7 +9,8 @@ public class StandartSpendingStrategy implements SpendingStrategy {
 
     @Override
     public double getAvailableMoney() {
-        return wallet.getSalary() * 0.5;
+//        return wallet.getSalary() * 0.5;
+        return 0;
     }
 
     @Override

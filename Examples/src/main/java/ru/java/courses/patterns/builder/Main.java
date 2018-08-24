@@ -3,60 +3,6 @@ package ru.java.courses.patterns.builder;
 public class Main {
 
     public static void main(String[] args) {
-        Book book = new Book(
-                "Ваня Рубанок",
-                "Как я покупал кефир",
-                "213ОDNRKR334-FDDE",
-                100500,
-                "Желтый",
-                "Нету",
-                123.45,
-                100,
-                12.5,
-                2018
-        );
-
-        Book book2 = new Book();
-        book.setAuthor("Fdsfsdf");
-        book.setQuantity(124);
-
-
-        Book book1 = new Book.BookBuilder()
-                .annotation("")
-                .build();
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
         BookBuilder bb = new BookBuilder()
                 .author("Ваня Рубанок")
                 .name("Как я покупал кефир")

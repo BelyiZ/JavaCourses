@@ -1,6 +1,6 @@
 package ru.java.courses;
 
-public class Lesson2 {
+class Lesson2 {
 
     /**
      * Нужно реализовать формулу y = √(13x + 13/x)
@@ -11,7 +11,7 @@ public class Lesson2 {
      * хвост отбрасываем без откругления
      */
    static int formula(int x) {
-       //x = 1;
+     
        int y = (int) Math.sqrt(13*x +13/x);
 
         return y;
@@ -31,14 +31,8 @@ public class Lesson2 {
      */
     static String initials(String fullName) {
         String[] splitName = fullName.split(" ");
-       char firstInitial = splitName[0].charAt(0);
-        char secondInitial = splitName[1].charAt(0);
-        char thirdInitial = splitName[2].charAt(0);
-        String result1 = Character.toString(firstInitial).toUpperCase();
-        String result2 = Character.toString(secondInitial).toUpperCase();
-        String result3 = Character.toString(thirdInitial).toUpperCase();
-
-        return new String(result1 + "." + result2 + "." + result3 + ".");
+        String readyInitial = splitName[0].charAt(0) + "." + splitName[1].charAt(0) + "." + splitName[2].charAt(0) + ".";
+        return readyInitial.toUpperCase();
     }
 
 }

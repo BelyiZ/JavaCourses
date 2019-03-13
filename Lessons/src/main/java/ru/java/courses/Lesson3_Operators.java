@@ -42,7 +42,7 @@ public class Lesson3_Operators {
         --i;
         int check = (i > 100 || i < 30) ? (i += 1000) : ((i > 0 && i % 2 == 0) ? (i -= 1000) : i);
 
-        return check >= 0 ? true : false;
+        return check >= 0;
     }
 
 

@@ -11,7 +11,7 @@ class Lesson2 {
      * хвост отбрасываем без откругления
      */
    static int formula(int x) {
-     
+
        int y = (int) Math.sqrt(13*x +13/x);
 
         return y;

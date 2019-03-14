@@ -44,22 +44,22 @@ public class Lesson4_FlowControl {
      * @return целочисленный результат выполнения операции
      */
     public static int task2(int i, int k, char operation) {
-        if (operation == '+') {
-            return i + k;
-        } else if (operation == '-') {
-            return i - k;
-        } else if (operation == '*') {
-            return i * k;
-        } else if (operation == '/') {
-            if (k == 0) {
+        switch (operation) {
+            case '+':
+                return i + k;
+            case '-':
+                return i - k;
+            case '*':
+                return i * k;
+            case '/':
+                if (k == 0) {
+                    return 0;
+                }
+                return i / k;
+            case '%':
+                return i % k;
+            default:
                 return 0;
-            }
-            return i / k;
-
-        } else if (operation == '%') {
-            return i % k;
-        } else {
-            return 0;
         }
     }
 }

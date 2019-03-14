@@ -18,19 +18,8 @@ public class Lesson3_Operators {
      * - получить первые n символов из строки можно методом .substring(0, n)
      */
     public static String task1(int i, String str) {
-        if (i > 0) {
-            str += i;
-        } else if (i < 0) {
-            str = i + str;
-        } else {
-            str = Integer.toString(i);
-        }
-
-        if (str.length() <= 10) {
-            return str;
-        } else {
-            return str.substring(0, 10);
-        }
+        String modifiedString = i > 0 ? str += i : (i < 0 ? i + str : Integer.toString(i));
+        return modifiedString.length() > 10 ? modifiedString.substring(0, 10) : modifiedString;
     }
 
     /**
@@ -47,17 +36,6 @@ public class Lesson3_Operators {
      * Подсказка: тут все просто, думайте сами ;)
      */
     public static boolean task2(int i) {
-        i -= 1;
-        if (i > 100 || i < 30) {
-            i += 1000;
-        } else if (i > 0 && i % 2 == 0) {
-            i -= 1000;
-        }
-
-        if (i < 0){
-            return false;
-        } else {
-            return true;
-        }
+        return (--i > 100 || i < 30 ? i + 1000 : (i > 0 && i % 2 == 0 ? i - 1000 : i)) >= 0;
     }
 }

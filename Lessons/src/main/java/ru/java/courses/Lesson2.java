@@ -29,8 +29,9 @@ class Lesson2 {
     static String initials(String fullName) {
         String[] substrings = fullName.split(" ");
         String initials = "";
-        for (String s : substrings) initials = initials + s.charAt(0) + ".";
+        for (String s : substrings) {
+            initials = initials + s.charAt(0) + ".";
+        }
         return initials.toUpperCase();
     }
-
 }

@@ -13,11 +13,16 @@ public class Lesson4_FlowControl {
      * Подсказка: массив может быть пустой
      *
      * @param strings массив строк случайной длины
-     *
      * @return самую длинную строку из полученного массива
      */
     public static String task1(String[] strings) {
-        return null;
+        String longestString = "";
+        for (String str : strings) {
+            if (str.length() > longestString.length()) {
+                longestString = str;
+            }
+        }
+        return longestString;
     }
 
     /**
@@ -30,16 +35,31 @@ public class Lesson4_FlowControl {
      * % - остаток от деления i на k
      * <p>
      * Как мы помним, на 0 делить нельзя. В этом случае просто возвращаем 0.
-     *
+     * <p>
      * Подсказка: переданный символ операции может быть не из списка выше
      *
      * @param i         первый числовой параметр
      * @param k         второй числовой параметр
      * @param operation символ, указывающий на операцию
-     *
      * @return целочисленный результат выполнения операции
      */
     public static int task2(int i, int k, char operation) {
-       return 0;
+        if (operation == '+') {
+            return i + k;
+        } else if (operation == '-') {
+            return i - k;
+        } else if (operation == '*') {
+            return i * k;
+        } else if (operation == '/') {
+            if (k == 0) {
+                return 0;
+            }
+            return i / k;
+
+        } else if (operation == '%') {
+            return i % k;
+        } else {
+            return 0;
+        }
     }
 }

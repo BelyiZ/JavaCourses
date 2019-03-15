@@ -28,11 +28,11 @@ public class Lesson4_FlowControl {
           //      }
        //     }
   //2-й вариант   - выглядит как-то странно и я не уверена, что это ок
-            for (String name: strings
-                 )
+            for (String name: strings) {
                 if (name.length() > longest.length()) {
                     longest = name;
                 }
+            }
             return longest;
         } else
             return "";

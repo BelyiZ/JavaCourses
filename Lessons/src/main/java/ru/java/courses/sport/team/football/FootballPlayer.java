@@ -9,13 +9,6 @@ public class FootballPlayer {
     private boolean active;
     private int age;
 
-//    public FootballPlayer(String name, int goals, boolean active, int age) {
-//        this.name = name;
-//        this.goals = goals;
-//        this.active = active;
-//        this.age = (age < 18) ? 18 : age;
-//
-//    }
 
     public FootballPlayer(String name, PlayerRole role) {
         if (name == null || name.isEmpty()) {
@@ -36,28 +29,18 @@ public class FootballPlayer {
         this.active = true;
     }
 
-    public FootballPlayer() {
-
-    }
+    public FootballPlayer() {}
 
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = (age < 18) ? 18 : age;
-    }
+    public void setAge(int age) {this.age = (age < 18) ? 18 : age;}
 
-    public boolean isActive()
-    {
-        return active;
-    }
+    public boolean isActive(){return active;}
 
-    public void setActive(boolean active) {
-
-        this.active = active;
-    }
+    public void setActive(boolean active) {this.active = active;}
 
     public String getName() {
         return name;
@@ -82,20 +65,13 @@ public class FootballPlayer {
         return goals;
     }
 
-
     public int getGoals() {
         return goals;
     }
 
-    public void setGoals(int goals) {
+    public void setGoals(int goals) {this.goals = goals;}
 
-        this.goals = goals;
-    }
-
-
-    public PlayerRole getRole() {
-        return role;
-    }
+    public PlayerRole getRole() {return role;}
 
     public void setRole(PlayerRole role) {
         if (role == null) {

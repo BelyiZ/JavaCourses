@@ -25,9 +25,9 @@ public class Lesson5to8_OOP {
 
     Класс: FootballTeam
     Поля: players, name, coach
-    Методы: addPlayers, getPlayersCount, getScore
+    Методы: addPlayer, getPlayersCount, getScore
 
-    Класс: ScoringPlayer
+    Класс: FootballPlayer
     Поля: name, goals, role
     Методы: score
 

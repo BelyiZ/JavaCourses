@@ -27,7 +27,7 @@ public class Lesson4_FlowControl {
           //          longest = strings[i];
           //      }
        //     }
-  //2-й вариант  
+  //2-й вариант
             for (String name: strings) {
                 if (name.length() > longest.length()) {
                     longest = name;

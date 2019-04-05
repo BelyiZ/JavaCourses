@@ -5,14 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class FootballTeam
+public class FootballTeam extends AppearanceBuilder
 {
     private String name;
     private Coach coach;
     private List<FootballPlayer> players = new ArrayList<>();
 
     public String toString() {     // возвращает данные объекта в строке
-        return "name is " + this.name + "coach is" + this.coach + "team is" + this.players;
+        return "name is " + this.name + "coach is" + this.coach + "team is" + this.players + this.appearanceBuilder;
     }
 
 
@@ -68,6 +68,7 @@ public class FootballTeam
         this.players = players;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -75,12 +76,40 @@ public class FootballTeam
         FootballTeam team = (FootballTeam) o;
         return Objects.equals(name, team.name) &&
                 Objects.equals(coach, team.coach) &&
-                Objects.equals(players, team.players);
+                Objects.equals(players, team.players) &&
+                Objects.equals(appearanceBuilder, team.appearanceBuilder);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, coach, players);
+        return Objects.hash(name, coach, players, appearanceBuilder);
+    }
+
+    @Override
+    public void buildUniform_color() {appearence.setUniform_color("Red");
+
+    }
+
+    @Override
+    public void buildFlag() {appearence.setFlag("Blue");
+
+    }
+
+    @Override
+    public void buildLogo() {appearence.setLogo("Cross");
+
+    }
+
+    private AppearanceBuilder appearanceBuilder;
+
+    public void setAppearanceBuilder(AppearanceBuilder ab) {this.appearanceBuilder = ab; }
+    public Appearance getAppearance() { return appearanceBuilder.getAppearance(); }
+
+    public void constructAppearance() {
+        appearanceBuilder.createNewTeamAppearance();
+        appearanceBuilder.buildUniform_color();
+        appearanceBuilder.buildFlag();
+        appearanceBuilder.buildLogo();
     }
 }
 

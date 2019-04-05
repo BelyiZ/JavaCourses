@@ -8,13 +8,11 @@ public enum PlayerRole {
     WINGER("Нападающий"),
     GOALKEEPER("Вратарь");
 
-    private String name;
+    protected String name;
 
     PlayerRole(String name) {this.name = name;}
 
     public String getName() {return name;}
-
-
 
 
 }

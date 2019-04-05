@@ -3,19 +3,22 @@ package ru.java.courses.sport.team.football;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
-public class FootballTeam extends FootballPlayer
+public class FootballTeam
 {
     private String name;
     private Coach coach;
     private List<FootballPlayer> players = new ArrayList<>();
-    private int playersNumber;
+
+    public String toString() {     // возвращает данные объекта в строке
+        return "name is " + this.name + "coach is" + this.coach + "team is" + this.players;
+    }
+
 
     public FootballTeam(String name){
-        if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("The team should have name");
-        }else
-        this.name = name;
+
+        setName(name);
        }
 
     public String getName(){return name;}
@@ -31,19 +34,19 @@ public class FootballTeam extends FootballPlayer
 
     public void setCoach(Coach coach){this.coach = coach;}
 
-    public int getPlayersNumber(){return playersNumber;}
-
-    public void setPlayersNumber(int playersNumber){
-         this.playersNumber = playersNumber;
-    }
-
     public void addPlayer(FootballPlayer footballPlayer){
-        if (players.size() +1 >= 20){
+        if (players.size() >= 20){
             throw new IllegalArgumentException("There shouldn't be more then 20 players in Team");
-        } players.add(footballPlayer);
+        }else if (footballPlayer == null){
+            throw new IllegalArgumentException("You haven't chosen anyone");
+        }else
+        players.add(footballPlayer);
     }
 
     public void removePlayer(FootballPlayer footballPlayer){
+        if(footballPlayer == null){
+            throw new IllegalArgumentException("You haven't chosen anyone");
+        } else
         players.remove(footballPlayer);
     }
 
@@ -65,5 +68,19 @@ public class FootballTeam extends FootballPlayer
         this.players = players;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FootballTeam team = (FootballTeam) o;
+        return Objects.equals(name, team.name) &&
+                Objects.equals(coach, team.coach) &&
+                Objects.equals(players, team.players);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, coach, players);
+    }
 }
 

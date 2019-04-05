@@ -1,6 +1,7 @@
 package ru.java.courses.sport.team.football;
 
 import java.util.List;
+import java.util.Objects;
 
 public class FootballPlayer {
     private String name;
@@ -9,24 +10,38 @@ public class FootballPlayer {
     private boolean active;
     private int age;
 
+    public String toString() {     // возвращает данные объекта в строке
+        return "name is " + this.name + "number of goals is" + this.goals + "age is" + this.age + "role is" + this.role + this.active;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FootballPlayer that = (FootballPlayer) o;
+        return goals == that.goals &&
+                active == that.active &&
+                age == that.age &&
+                Objects.equals(name, that.name) &&
+                role == that.role;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, goals, role, active, age);
+    }
 
     public FootballPlayer(String name, PlayerRole role) {
-        if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Sportsman should have name");
-        }else if (role == null){
-            throw new IllegalArgumentException("Sportsman should have role");
-        } else
-            this.name = name;
-        this.role = role;
-        this.active = true;
+
+        setName(name);
+        setRole(role);
+        setActive(true);
     }
 
     public FootballPlayer(String name) {
-        if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Sportsman should have name");
-        }else
-            this.name = name;
-        this.active = true;
+
+        setName(name);
+        setActive(true);
     }
 
     public FootballPlayer() {}
@@ -38,7 +53,7 @@ public class FootballPlayer {
 
     public void setAge(int age) {this.age = (age < 18) ? 18 : age;}
 
-    public boolean isActive(){return active;}
+    private boolean isActive(){return active;}
 
     public void setActive(boolean active) {this.active = active;}
 

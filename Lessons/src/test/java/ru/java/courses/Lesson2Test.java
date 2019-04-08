@@ -25,6 +25,7 @@ public class Lesson2Test {
     @Test
     public void initials() {
         assertEquals("И.И.П.", Lesson2.initials("Иванов Иван Петрович"), "Иванов Иван Петрович → И.И.П.");
+        assertEquals("И.И.П.", Lesson2.initials("иванов иван петрович"), "иванов иван петрович → И.И.П.");
         assertEquals("П.А.Н.", Lesson2.initials("Петров алексей Никифорович"), "Петров алексей Никифорович → П.А.Н.");
         assertEquals("К.Г.В.", Lesson2.initials("Козлова Галина Васильевна"), "Козлова Галина Васильевна → К.Г.В.");
         assertEquals("П.А.С.", Lesson2.initials("Пушкин А. С."), "Пушкин А. С. → П.А.С.");

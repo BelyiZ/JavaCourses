@@ -10,14 +10,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.java.courses.sport.Athlete;
 import ru.java.courses.sport.Coach;
-import ru.java.courses.sport.team.Team;
 import ru.java.courses.sport.team.football.FootballPlayer;
 import ru.java.courses.sport.team.football.FootballTeam;
 import ru.java.courses.sport.team.football.PlayerRole;
 
 public class Lesson5to8_OOPTest {
 
-    private static Team team;
+    private static FootballTeam team;
 
     @BeforeAll
     public static void setup() {

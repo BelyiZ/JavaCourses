@@ -2,8 +2,7 @@ package ru.java.courses.collections;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.List;
 
 public class Task2 {
 
@@ -18,13 +17,13 @@ public class Task2 {
     }
 
     public static void main(String[] args) {
-        Set<User> set = new HashSet<>();
-        set.add(new User("Ivan", 22));
-        set.add(new User("Masha", 18));
-        set.add(new User("David", 34));
-        set.add(new User("Masha", 18));
-        set.add(new User("Ivan", 22));
-        set.add(new User("Igor", 25));
+        List<User> collection = new ArrayList<>();
+        collection.add(new User("Ivan", 22));
+        collection.add(new User("Masha", 18));
+        collection.add(new User("David", 34));
+        collection.add(new User("Masha", 18));
+        collection.add(new User("Ivan", 22));
+        collection.add(new User("Igor", 25));
 
         // Убрать повторения пользователей
 

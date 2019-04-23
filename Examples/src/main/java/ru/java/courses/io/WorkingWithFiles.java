@@ -6,8 +6,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class WorkingWithFiles {
 
@@ -15,32 +15,47 @@ public class WorkingWithFiles {
         copy();
     }
 
+    private static final Logger LOG = LoggerFactory.getLogger(WorkingWithFiles.class);
 
     public static void copy() {
-        File inputFile = new File("files/input.txt");
+        File inputFile = new File("files/iwnput.txt");
         File outputFile = new File("files/output.txt");
+        final int buffSize = 1024;
+
+        LOG.info(
+                "Trying copy file. Source: {} and destination: {}, buf {}",
+                inputFile.getAbsolutePath(),
+                outputFile.getAbsolutePath(),
+                buffSize
+        );
 
         if (inputFile.isDirectory() || !inputFile.exists()) {
-            throw new RuntimeException("File not found");
+            IllegalStateException e = new IllegalStateException("File not found");
+            LOG.error("File not found", e);
+            throw e;
         }
 
         if (outputFile.isDirectory()) {
-            throw new RuntimeException("Invalid path to file");
+            throw new IllegalStateException("Invalid path to file");
         }
 
         if (outputFile.exists()) {
-            outputFile.delete();
+            LOG.warn("Destination file exists");
+            boolean deleted = outputFile.delete();
+            if (!deleted) {
+                throw new RuntimeException("Can't remove file " + outputFile.getAbsolutePath());
+            }
         }
 
         try (
                 FileInputStream fis = new FileInputStream(inputFile);
-                BufferedInputStream bis = new BufferedInputStream(fis, 1024);
+                BufferedInputStream bis = new BufferedInputStream(fis, buffSize);
 
                 FileOutputStream fos = new FileOutputStream(outputFile);
-                BufferedOutputStream bos = new BufferedOutputStream(fos, 1024);
+                BufferedOutputStream bos = new BufferedOutputStream(fos, buffSize);
         ) {
 
-            byte[] buf = new byte[1024];
+            byte[] buf = new byte[buffSize];
             int off = 0;
 
             while (bis.read(buf) != -1) {
@@ -51,11 +66,8 @@ public class WorkingWithFiles {
             bos.flush();
 
         } catch (IOException e) {
+            LOG.error("Error while crate copy of file", e);
             // shit happens
         }
-
-
     }
-
-
 }

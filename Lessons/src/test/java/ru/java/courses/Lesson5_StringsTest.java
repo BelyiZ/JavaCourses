@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 public class Lesson5_StringsTest {
 
     @Test
-    void task1test(String[] strings) {
+    void task1test() {
         assertEquals(
                 task1(new String[]{"abc", "123", "ABC", "abc", "qwerty", "aBc", "123", "QwErTy"}),
                 "abc123ABCqwertyaBcQwErTy"
@@ -27,7 +27,7 @@ public class Lesson5_StringsTest {
     }
 
     @Test
-    void task2test(String[][] pairs) {
+    void task2test() {
         assertArrayEquals(
                 task2(new String[][]{
                         new String[]{"Розы и шипы", "Андрей С. Долгов"},
@@ -47,7 +47,7 @@ public class Lesson5_StringsTest {
     }
 
     @Test
-    void task3test(String str) {
+    void task3test() {
         assertEquals(task3("Java 6 for all time", 'f', 'e'), "or all tim");
         assertEquals(task3("Java 6 for all time", '6', 't'), " for all ");
         assertEquals(task3("Java 6 for all time", 'y', 'e'), "");

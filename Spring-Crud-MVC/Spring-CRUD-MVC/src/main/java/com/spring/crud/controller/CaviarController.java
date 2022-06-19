@@ -69,7 +69,6 @@ public class CaviarController {
      * @param caviarDTO - DTO "Икры", исходя из которой нужно изменить данные.
      * @return - ResponseEntity<Long> при удачном выполнении алгоритма №3.
      */
-    @PutMapping("/api/caviar/{caviarId}")
     public ResponseEntity<Long> editCaviar(Long caviarId, CaviarDTO caviarDTO) {
         return null;
     }
@@ -88,7 +87,6 @@ public class CaviarController {
      * @param caviarId - ID "Икры", которую необходимо удалить.
      * @return - ResponseEntity<Void> с ответом 200 HTTP Ok.
      */
-    @DeleteMapping("/api/caviar/{caviarId}")
     public ResponseEntity<Void> deleteCaviar(@PathVariable Long caviarId) {
         return null;
     }

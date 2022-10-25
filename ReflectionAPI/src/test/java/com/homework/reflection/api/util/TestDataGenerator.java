@@ -16,13 +16,11 @@ public class TestDataGenerator {
         result.setTableName("user");
 
         Map<String, String> fieldWithType = new HashMap<>();
-        fieldWithType.put("id", "Long");
         fieldWithType.put("name", "String");
-        fieldWithType.put("email", "String");
+        fieldWithType.put("login", "String");
         fieldWithType.put("phone_number", "String");
         fieldWithType.put("password", "String");
         fieldWithType.put("birth_date", "LocalDate");
-        fieldWithType.put("test_field_with_many_many_words", "String");
 
         result.setFieldWithType(fieldWithType);
 

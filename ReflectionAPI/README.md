@@ -28,6 +28,3 @@
 	4) Инициализированный объект класса UserTableMetadata нужно вернуть в методе getUserTableMetadata() класса ReflectionApiMetadataService .
 
 Тесты запускаются из класса ReflectionApiServiceTest по пути 'test/java/com/homework/reflection/api/service'.
-
-
-
